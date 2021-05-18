@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;cetaceaqua.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;right&quot;,&quot;width&quot;:220,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
+<meta name="description" content="写在前面早先在B站看到这个转载的“Blender Introduction Series for Beginners”系列视频，心里痒痒了好久，一直想学 Blender，但奈何高中学习任务重，抽不出来时间。 这次恰逢一周的综合实践，我又生病在家，正好就把在收藏夹里埋藏以久的这套教程扒出来学一学。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blender 3D 入门随手记 第1天">
+<meta property="og:url" content="https://cetaceaqua.com/2021/05/17/blender-3d-beginner-notes-day-1/">
+<meta property="og:site_name" content="CETALOG">
+<meta property="og:description" content="写在前面早先在B站看到这个转载的“Blender Introduction Series for Beginners”系列视频，心里痒痒了好久，一直想学 Blender，但奈何高中学习任务重，抽不出来时间。 这次恰逢一周的综合实践，我又生病在家，正好就把在收藏夹里埋藏以久的这套教程扒出来学一学。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/g25lge.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/g2LATH.gif">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gRYMBn.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gRNyOH.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gRNcmd.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gRagit.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gRaoZj.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/17/gR2Aqx.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/18/ghYjkn.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/05/18/ghYvYq.png">
+<meta property="article:published_time" content="2021-05-17T03:42:40.000Z">
+<meta property="article:modified_time" content="2021-05-18T12:09:34.983Z">
+<meta property="article:author" content="cetaceaqua">
+<meta property="article:tag" content="blender">
+<meta property="article:tag" content="3d">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/05/17/g25lge.png">
+
+
+<link rel="canonical" href="https://cetaceaqua.com/2021/05/17/blender-3d-beginner-notes-day-1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;cetaceaqua.com&#x2F;2021&#x2F;05&#x2F;17&#x2F;blender-3d-beginner-notes-day-1&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;17&#x2F;blender-3d-beginner-notes-day-1&#x2F;&quot;,&quot;title&quot;:&quot;Blender 3D 入门随手记 第1天&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Blender 3D 入门随手记 第1天 | CETALOG</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">CETALOG</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%89%8B%E8%AE%B0"><span class="nav-number">2.</span> <span class="nav-text">随手记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%80%89%E9%A1%B9"><span class="nav-number">2.1.</span> <span class="nav-text">首选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">2.2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%A1%8C%E5%AD%90"><span class="nav-number">2.5.</span> <span class="nav-text">实例：桌子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%BB%BA%E7%AD%91"><span class="nav-number">2.6.</span> <span class="nav-text">实例：建筑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="cetaceaqua"
+      src="https://z3.ax1x.com/2021/05/02/gZD10A.png">
+  <p class="site-author-name" itemprop="name">cetaceaqua</p>
+  <div class="site-description" itemprop="description">记录鲸流的无趣生活。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/@cetaceaqua" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;@cetaceaqua" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tml233.com/" title="https:&#x2F;&#x2F;www.tml233.com&#x2F;" rel="noopener" target="_blank">糖萌芦</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cetaceaqua.com/2021/05/17/blender-3d-beginner-notes-day-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/05/02/gZD10A.png">
+      <meta itemprop="name" content="cetaceaqua">
+      <meta itemprop="description" content="记录鲸流的无趣生活。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CETALOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Blender 3D 入门随手记 第1天
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-17 11:42:40" itemprop="dateCreated datePublished" datetime="2021-05-17T11:42:40+08:00">2021-05-17</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-18 20:09:34" itemprop="dateModified" datetime="2021-05-18T20:09:34+08:00">2021-05-18</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>早先在B站看到这个转载的“<strong>Blender Introduction Series for Beginners</strong>”系列视频，心里痒痒了好久，一直想学 Blender，但奈何高中学习任务重，抽不出来时间。</p>
+<p>这次恰逢一周的综合实践，我又生病在家，正好就把在收藏夹里埋藏以久的这套教程扒出来学一学。</p>
+<span id="more"></span>
+
+<p>附上第一集的视频链接，有兴趣的话也可以跟着学学。</p>
+<iframe src="//player.bilibili.com/player.html?aid=839959659&bvid=BV1t54y1R7KF&cid=245288895" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/At9qW8ivJ4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<h1 id="随手记"><a href="#随手记" class="headerlink" title="随手记"></a>随手记</h1><p>第一集的内容正如它的副标题“<strong>Absolute Basics</strong>”，对 Blender 的界面和基础操作进行了详细介绍，并穿插了两个低模建模小任务。</p>
+<p><em>（为了更方便的跟随教程操作，我没把 Blender 调成中文。）</em></p>
+<hr>
+<h2 id="首选项"><a href="#首选项" class="headerlink" title="首选项"></a>首选项</h2><p><img src="https://z3.ax1x.com/2021/05/17/g25lge.png" alt="首选项设置"></p>
+<p>将<strong>鼠标选中</strong>改为<strong>右键</strong>，<strong>空格键操作</strong>改为<strong>搜索</strong>。</p>
+<hr>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><em>（省略了滚轮放大缩小和 <kbd>Ctrl + Z</kbd> 之类早就刻在DNA里的快捷键。）</em></p>
+<p><kbd>G</kbd>：移动</p>
+<p><kbd>S</kbd>：缩放</p>
+<p><kbd>R</kbd>：旋转</p>
+<p><kbd>G</kbd> + <kbd>X</kbd> / <kbd>Y</kbd> / <kbd>Z</kbd>：仅沿 X / Y / Z 方向移动</p>
+<p><kbd>S</kbd> + <kbd>X</kbd> / <kbd>Y</kbd> / <kbd>Z</kbd>：仅沿 X / Y / Z 方向缩放</p>
+<p><kbd>R</kbd> + <kbd>X</kbd> / <kbd>Y</kbd> / <kbd>Z</kbd>：仅沿 X / Y / Z 方向旋转</p>
+<p><kbd>Alt</kbd> + <kbd>G</kbd>：重置移动</p>
+<p><kbd>Alt</kbd> + <kbd>S</kbd>：重置缩放</p>
+<p><kbd>Alt</kbd> + <kbd>R</kbd>：重置旋转</p>
+<p><kbd>Ctrl</kbd> + <kbd>A</kbd>：应用菜单</p>
+<p><em>（重置会使物体回到上一次应用变换时的默认状态。）</em></p>
+<p><kbd>Shift</kbd> + <kbd>A</kbd>：添加菜单</p>
+<p><kbd>Shift</kbd> + <kbd>鼠标中键</kbd>：平移视口</p>
+<p><kbd>Numpad 1</kbd>：正视图</p>
+<p><kbd>Numpad 7</kbd>：顶视图</p>
+<p><kbd>Numpad 3</kbd>：右视图</p>
+<p><kbd>Ctrl</kbd> + <kbd>Numpad 1</kbd>：后视图</p>
+<p><kbd>Ctrl</kbd> + <kbd>Numpad 7</kbd>：底视图</p>
+<p><kbd>Ctrl</kbd> + <kbd>Numpad 3</kbd>：左视图</p>
+<p><kbd>Numpad .</kbd>：专注选中物体</p>
+<p><kbd>/</kbd>：专注选中物体</p>
+<p><em>（与 <kbd>Numpad .</kbd> 不同的是 <kbd>/</kbd> 会使其他物体隐藏，再按一次 <kbd>/</kbd> 以取消隐藏其他物体。）</em></p>
+<p><kbd>B</kbd>：框选</p>
+<p><em>（使用 <kbd>鼠标中键</kbd> 拖动框选可以取消选择。）</em></p>
+<p><kbd>A</kbd>：全选</p>
+<p><em>（双击 <kbd>A</kbd> 取消全部选择。）</em></p>
+<p><kbd>Shift</kbd> + <kbd>S</kbd>：对齐菜单</p>
+<p><kbd>Ctrl</kbd> + <kbd>Space</kbd>：最大化编辑器区域  / 退出最大化编辑器区域</p>
+<p><kbd>Ctrl</kbd> + <kbd>J</kbd>：合并物体</p>
+<p><kbd>Shift</kbd> + <kbd>D</kbd>：复制物体</p>
+<p><kbd>Numpad 0</kbd>：摄像机视角</p>
+<p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd>：把当前视图设为摄像机视角</p>
+<hr>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p><strong>Properties</strong> -&gt; <strong>Scene Properties</strong> -&gt; <strong>Units</strong> -&gt; <strong>Length</strong>：更改使用的长度单位</p>
+<hr>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p><kbd>鼠标左键</kbd> 单击放置的 <strong>3D 游标</strong>将成为添加的新物体的中心。</p>
+<p><kbd>鼠标左键</kbd> 拖动编辑器区域<strong>圆角外的区域</strong>来复制或合并编辑器区域。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/g2LATH.gif" alt="复制或合并编辑器区域"></p>
+<p>调整<strong>添加的物体的数值</strong>的菜单仅在进行其他操作前可用。</p>
+<p>（还没进行其他操作，比如移动或是变形的话，可以按 <kbd>F9</kbd> 唤出调整菜单。）</p>
+<p>切换<strong>变换坐标系</strong>到<strong>本地</strong>可以使物体按自己的坐标系进行变换。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gRYMBn.png" alt="切换变换坐标系到本地"></p>
+<p>切换<strong>变换原点</strong>来更高效的旋转物体。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gRNyOH.png" alt="变换原点"></p>
+<p>切换<strong>吸附</strong>模式来更高效的放置物体。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gRNcmd.png" alt="吸附"></p>
+<p>黄点是物体的<strong>原点</strong>，可以通过物体菜单来设置原点。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gRagit.png" alt="物体原点"></p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gRaoZj.png" alt="设置原点"></p>
+<hr>
+<h2 id="实例：桌子"><a href="#实例：桌子" class="headerlink" title="实例：桌子"></a>实例：桌子</h2><p><del><em>（年轻人的第一张桌子。）</em></del></p>
+<p>综合运用了本集中讲解的大部分快捷键与吸附操作，做完挺有成就感的😃。</p>
+<p><img src="https://z3.ax1x.com/2021/05/17/gR2Aqx.png" alt="桌子"></p>
+<div class="sketchfab-embed-wrapper"> <iframe title="2021-05-17 - Table" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d95113da4cb4433f8a9272491190cd80/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/2021-05-17-table-d95113da4cb4433f8a9272491190cd80?utm_medium=embed&utm_campaign=share-popup&utm_content=d95113da4cb4433f8a9272491190cd80" target="_blank" style="font-weight: bold; color: #1CAAD9;"> 2021-05-17 - Table </a> by <a href="https://sketchfab.com/cetaceaqua?utm_medium=embed&utm_campaign=share-popup&utm_content=d95113da4cb4433f8a9272491190cd80" target="_blank" style="font-weight: bold; color: #1CAAD9;"> cetaceaqua </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=d95113da4cb4433f8a9272491190cd80" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+<p><em>(👆顺手给传到 Sketchfab 上了，可以直接预览。)</em></p>
+<hr>
+<h2 id="实例：建筑"><a href="#实例：建筑" class="headerlink" title="实例：建筑"></a>实例：建筑</h2><p>初涉分配材质与渲染，并且使用了一个<a target="_blank" rel="noopener" href="https://hdrihaven.com/hdri/?h=spruit_sunrise">来自 HDRI Heaven 的 HDRI。</a></p>
+<p><img src="https://z3.ax1x.com/2021/05/18/ghYjkn.png" alt="建筑"></p>
+<p><img src="https://z3.ax1x.com/2021/05/18/ghYvYq.png" alt="建筑的渲染图"></p>
+<div class="sketchfab-embed-wrapper"> <iframe title="2021-05-17 - Building" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3734848380a747c6affb1b5cd20fe5f4/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/2021-05-17-building-3734848380a747c6affb1b5cd20fe5f4?utm_medium=embed&utm_campaign=share-popup&utm_content=3734848380a747c6affb1b5cd20fe5f4" target="_blank" style="font-weight: bold; color: #1CAAD9;"> 2021-05-17 - Building </a> by <a href="https://sketchfab.com/cetaceaqua?utm_medium=embed&utm_campaign=share-popup&utm_content=3734848380a747c6affb1b5cd20fe5f4" target="_blank" style="font-weight: bold; color: #1CAAD9;"> cetaceaqua </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3734848380a747c6affb1b5cd20fe5f4" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+<p><em>（👆不知道为啥传到 Sketchfab 之后马路上多了道栏杆，我也不知道咋解决。）</em></p>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>因为还得留出时间复习学校的功课，Day 1这集足足拖到了第二天才学完。<del><em>（说好的Day 1呢。）</em></del></p>
+<p>学到了很多基础的东西，通过做两个实例也练成了一些<strong>肌肉记忆</strong>。<em>（比如 <kbd>Shift</kbd> + <kbd>A</kbd> 。）</em></p>
+<p>虽然这集还没有讲我心心念念的<strong>雕刻模式</strong>，但估计很快就能讲到了。</p>
+<p>总之就，Blender <del>搅拌机</del>真好玩。</p>
+<p>2021/05/18 晚 🌚</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/blender/" rel="tag"># blender</a>
+              <a href="/tags/3d/" rel="tag"># 3d</a>
+              <a href="/tags/notes/" rel="tag"># notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/16/hello-hexo/" rel="prev" title="你好，Hexo">
+                  <i class="fa fa-chevron-left"></i> 你好，Hexo
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cetaceaqua</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
